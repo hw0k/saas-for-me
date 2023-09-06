@@ -1,0 +1,25 @@
+---
+import { getSaasList } from '../get-saas-list.ts';
+
+const saasList = getSaasList();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>SaaS for Me</title>
+	</head>
+	<body>
+		<h1>SaaS for Me</h1>
+		{saasList.map((saas) => (
+			<Fragment>
+				<h1>{saas.name}</h1>
+				<p>{saas.description}</p>
+				<a href={saas.website}>{saas.website}</a>
+				<p>{saas.tags.join(', ')}</p>
+			</Fragment>
+		))}
+	</body>
+</html>
