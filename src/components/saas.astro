@@ -9,6 +9,6 @@ const { name, description, website, tags } = Astro.props;
 <section class="flex flex-col items-start flex-wrap mb-4">
   <h3 class="text-xl font-bold mb-1">{name}</h3>
   <p>{description}</p>
-  <a href={website} class="mb-2">{website}</a>
+  <a href={website} class="text-blue-600 underline mb-2">{website}</a>
   <TagList tags={tags} />
 </section>
