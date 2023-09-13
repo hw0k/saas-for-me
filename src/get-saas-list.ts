@@ -1,4 +1,4 @@
-import {z} from "zod";
+import { z } from "zod";
 import saasList from './constants/saas-list.json';
 
 const schema = z.array(z.object({

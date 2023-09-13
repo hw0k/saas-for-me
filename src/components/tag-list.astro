@@ -1,0 +1,13 @@
+---
+import TagComponent from "./tag.astro";
+import { Tag } from "../types/tag";
+
+interface Props {
+  tags: Tag[];
+}
+
+const { tags } = Astro.props;
+---
+<div class="flex flex-row items-center gap-x-1">
+  {tags.map(tag => <TagComponent>{tag}</TagComponent>)}
+</div>

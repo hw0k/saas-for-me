@@ -1,0 +1,18 @@
+---
+import SaasComponent from "./saas.astro";
+import { Saas } from "../types/saas";
+
+interface Props {
+  saasList: Saas[];
+}
+
+const { saasList } = Astro.props;
+---
+{saasList.map(({ name, description, website, tags }) => (
+  <SaasComponent
+    name={name}
+    description={description}
+    website={website}
+    tags={tags}
+  />
+))}
